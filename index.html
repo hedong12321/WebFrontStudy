@@ -14,7 +14,15 @@
 		
 		<div class="container">
 			<div id="app">
-				{{message}}
+				<ol>
+					<li v-for="book in books">{{book.name}}</li>
+				</ol>
+				
+				<input v-model="message" />
+				&nbsp;&nbsp;
+				<button v-on:click="reverseMessage">逆转消息</button>
+				
+				<p>{{message}}</p>
 			</div>
 		</div>
 		
